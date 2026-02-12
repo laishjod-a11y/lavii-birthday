@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Lavi ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.heart {
+    position: fixed;
+    bottom: -10px;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 0.8; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: white;
+    color: #ff4d6d;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #ffe6ea;
+}
+
+.section {
+    margin-top: 40px;
+    animation: fadeIn 2s ease-in-out;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Happy Birthday My Lavi ❤️</h1>
+    <p>My dearest Maanvi,</p>
+
+    <div class="section">
+        <h2>A Little Love Letter From Lakshya 💌</h2>
+        <p>
+        It has only been 3 months, but these 3 months with you feel so special to me.
+        I love how comfortable you are with me, how your eyes shine when you talk,
+        and that cute voice of yours that instantly makes my day better.
+        <br><br>
+        Even though we are miles apart, my heart feels closest to you.
+        You are not just my girlfriend, you are my peace, my happiness,
+        and my favourite notification.
+        <br><br>
+        I’m so lucky to call you mine, Lavi.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Reasons I Love You 💖</h2>
+        <p>✨ The way you feel safe and comfortable with me</p>
+        <p>✨ Your beautiful eyes that I could stare at forever</p>
+        <p>✨ That cute voice that melts my heart</p>
+        <p>✨ The way you make my life brighter every single day</p>
+    </div>
+
+    <div class="section">
+        <h2>Forever With You 🌙</h2>
+        <p>
+        This is just the beginning of our story.
+        No distance can ever reduce what I feel for you.
+        I promise to always care for you, support you,
+        and love you more with each passing day.
+        <br><br>
+        Happy Birthday once again, my Lavi ❤️
+        <br>
+        – Yours, Lakshya
+        </p>
+    </div>
+
+    <button class="button" onclick="playMusic()">Tap Here For A Surprise 🎵</button>
+
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}
+
+setInterval(createHeart, 500);
+
+function playMusic() {
+    document.getElementById("bgMusic").play();
+}
+</script>
+
+</body>
+</html>
